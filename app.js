@@ -25,19 +25,10 @@ app.set("view engine", "ejs");
 //   });
 // const Todo = mongoose.model("Todo", todoSchema);
 
-
-
-
 // style in ./public/style.css
 // script in ./public/script.js
 app.use(express.static("public"));
-app.listen(3000)
-
-
-
-
-
-
+app.listen(3000);
 
 const get_todos = (req, res) => {
   Todo.find({}, (err, todos) => {
@@ -54,11 +45,11 @@ const post_todos = (req, res) => {
   res.redirect("/todo");
 };
 
-
-
-
-
 app.get("/todo", (req, res) => {
-    res.render("todo");
+  res.render("todo");
 });
 app.post("/todo", post_todos);
+
+app.get("/", (req, res) => {
+  res.render("todo");
+});
