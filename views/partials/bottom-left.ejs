@@ -1,0 +1,27 @@
+<div
+  class="bottom-left flex bg-gray-800 overflow-y-scroll flex-col p-2 relative left-0"
+>
+  <% chats.forEach(chat => { %>
+  <a
+    href="/rooms/<%= chat.id %>"
+    class="bottom-left items-center gap-2 cursor-pointer hover:bg-gray-700 py-2 px-3 flex rounded-xl"
+  >
+    <img
+      src="<%= chat.img %> "
+      class="w-10 h-10 rounded-full"
+      alt="<%= chat.name %> "
+    />
+    <div class="flex flex-1 flex-col">
+      <div class="title flex justify-between">
+        <div class="name font-bold truncate w-[140px]"><%= chat.name %></div>
+        <div class="date text-sm text-gray-500">21:24</div>
+      </div>
+      <div
+        class="subtitle text-sm text-gray-400 truncate overflow-hidden w-[130px]"
+      >
+        <%= chat.message %>
+      </div>
+    </div>
+  </a>
+  <% }) %>
+</div>

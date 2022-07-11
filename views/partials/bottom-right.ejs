@@ -1,0 +1,52 @@
+<div class="bottom-right md:w-4/6 w-full  px-4 py-2 mx-auto gap-3">
+  <!-- <div class="flex overflow-y-scroll flex-col-reverse gap-3 py-3">
+    <div
+      class="msg-person flex md:w-5/6 sm:w-4/6 rounded-xl p-2 bg-gray-800 justify-between"
+    >
+      sorry im late
+
+      <div class="date text-gray-400 text-sm relative top-2">01:20</div>
+    </div>
+    <div class="msg-me rounded-xl md:w-5/6 sm:w-4/6 p-2 self-end bg-violet-600">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, ipsum?
+    </div>
+  </div> -->
+
+  <div class="chats-container flex overflow-y-scroll flex-col gap-3 py-3">
+    <% if (chat) { %> <% chat.forEach(msg => { %>
+    <div
+      class="flex md:w-5/6 sm:w-4/6 rounded-xl p-2 justify-between <%= msg.name %>"
+    >
+      <%= msg.message %>
+      <div class="date text-gray-400 text-sm relative top-2">
+        <%= msg.time %>
+      </div>
+    </div>
+
+    <% }) %> <% } %>
+  </div>
+
+  <div class="flex gap-4">
+    <input
+      class="new-msg-input bg-gray-700 rounded-xl flex-1 p-3 text-gray-500"
+      type="text"
+      placeholder="New Messege"
+      data-id="<%= chat_id %>"
+    />
+
+    <div class="voice-btn bg-gray-700 p-3 rounded-full cursor-pointer">
+      <svg
+        class="w-6 h-6"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+    </div>
+  </div>
+</div>
