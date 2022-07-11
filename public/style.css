@@ -1,0 +1,8 @@
+html,body{
+    height: 100%;
+}
+.main{
+    display: grid;
+    grid-template-columns: minmax(200px,300px) 1fr;
+    grid-template-rows: auto 1fr;
+}
