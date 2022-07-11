@@ -104,7 +104,7 @@ const chats = [
 ];
 
 app.get("/", (req, res) => {
-  res.render("home", {
+  res.render("test-page", {
     chats,
     chat: false,
     chat_id:"test",
