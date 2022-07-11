@@ -1,59 +1,97 @@
-html,body{
-    height: 100%;
-    overflow: hidden;
+html,
+body {
+  height: 100%;
+  overflow: hidden;
 }
-.main{
-    display: grid;
-    grid-template-columns: minmax(200px,300px) 1fr;
-    grid-template-rows: 3.5em 1fr;
-    height: 100%;
+
+/* this line shittiest line of code ever dont try this at home!!!! */
+* {
+  transition: all 0.5s ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
 }
-.left-arrow-btn{
-    position: relative;
-    right: -40px;
+
+.main {
+  display: grid;
+  grid-template-columns: minmax(200px, 300px) 1fr;
+  grid-template-rows: 3.5em 1fr;
+  height: 100%;
+  overflow: hidden;
+}
+.left-arrow-btn {
+  position: relative;
+  right: -40px;
+  opacity: 0;
+  display: none;
+}
+
+@media (max-width: 550px) {
+  .main {
+    grid-template-columns: 0 1fr;
+  }
+  .top-left,
+  .bottom-left {
+    width: 0px;
+    padding: 0px !important;
+  }
+  .left-arrow-btn {
+    display: block;
+    right: 0;
+    opacity: 1;
+  }
+  .main.show-menu {
+    grid-template-columns: 1fr 0px;
+  }
+  .main.show-menu .top-left,
+  .bottom-left {
+    width: 100%;
+    padding: auto;
+  }
+  .top-left-search {
+    height: 2.5em !important;
+    align-self: center;
+  }
+  .main.show-menu.bottom-left {
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+    width: 100%;
+  }
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.bottom-right {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.me {
+  background-color: #7c3aed;
+  align-self: flex-end;
+}
+
+.person {
+  background-color: #374151;
+}
+
+.me.show,
+.person.show {
+  animation: fadeIn 0.5s ease-in-out;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from {
     opacity: 0;
-    display: none;
-}
-
-
-@media (max-width: 550px){
-    .main{
-        grid-template-columns: 0 1fr;
-    }
-    .top-left, .bottom-left{
-        width: 0px;
-        padding: 0px !important;
-    }
-    .left-arrow-btn{
-        display: block;
-        right: 0;
-        opacity: 1;
-    }
-}
-
-
-*::-webkit-scrollbar{
-    display: none;
-}
-
-
-.bottom-right{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
-    height: 100%;
-    overflow-y: hidden;
-}
-
-
-
-
-.me{
-    background-color: #7C3AED;
-    align-self: flex-end;
-}
-
-
-.person{
-    background-color: #374151;
+    bottom: -15px;
+  }
+  to {
+    opacity: 1;
+    bottom: 0;
+  }
 }

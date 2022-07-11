@@ -9,7 +9,7 @@ app.listen(process.env.PORT || 5000);
 
 const chats = [
   {
-    name: "Lily Ramirez",
+    name: "first chat room",
     message: "Ju ia anks",
     time: "11:02",
     img: "https://images.unsplash.com/photo-1657299170950-87e5b0eaf77c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
@@ -100,14 +100,14 @@ const chats = [
         time: "11:02",
       },
     ],
-  }
+  },
 ];
 
 app.get("/", (req, res) => {
   res.render("home", {
     chats,
     chat: false,
-    chat_id:"test",
+    chat_id: "test",
   });
 });
 
@@ -130,10 +130,6 @@ app.post("/rooms/:id", (req, res) => {
   });
   res.redirect(`/rooms/${id}`);
 });
-
-
-
-
 
 // app.get("/", (req, res) => {
 //   res.render("test-page");
