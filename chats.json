@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Harold Daniels",
+    "message": "Da ny orale orale orale orale orale orale lojhwor wen s",
+    "time": "05:02",
+    "img": "https://images.unsplash.com/photo-1657530007077-03b920b8bc12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+    "id": "4215d62c-adcf-5ec4-b2db-3eb1492f8d04",
+    "messeges": [
+      { "name": "person", "message": "Ju ia anks", "time": "11:02" },
+      { "name": "me", "message": "Ju ia anks", "time": "11:02" },
+      { "name": "me", "message": "sdfd", "time": "1:19:34 AM" },
+      { "name": "me", "message": "sdfs", "time": "1:19:52 AM" },
+      { "name": "me", "message": "sdfs", "time": "1:20:04 AM" }
+    ]
+  },
+  {
+    "name": "test",
+    "message": "this chat is for testing",
+    "time": "02:02",
+    "img": "https://images.unsplash.com/photo-1657563495719-e3693698c9c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+    "id": "test",
+    "messeges": [{ "name": "person", "message": "Ju ia anks", "time": "11:02" }]
+  },
+  {
+    "name": "Sarah Strickland",
+    "message": "Jeff ry unnin gham",
+    "time": "02:02",
+    "img": "https://images.unsplash.com/photo-1657563495719-e3693698c9c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+    "id": "df7aa668-c020-5d15-96bb-1a47ff2d2ed8",
+    "messeges": [
+      { "name": "person", "message": "Ju ia anks", "time": "11:02" },
+      { "name": "me", "message": "Ju ia anks", "time": "11:02" }
+    ]
+  }
+]
