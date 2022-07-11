@@ -28,7 +28,7 @@ app.set("view engine", "ejs");
 // style in ./public/style.css
 // script in ./public/script.js
 app.use(express.static("public"));
-app.listen(3000);
+app.listen(process.env.PORT || 5000);
 
 const get_todos = (req, res) => {
   Todo.find({}, (err, todos) => {
